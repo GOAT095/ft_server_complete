@@ -37,8 +37,6 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
-define('WP_CONTENT_DIR', '/var/www/html/wp-content');
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -48,14 +46,14 @@ define('WP_CONTENT_DIR', '/var/www/html/wp-content');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'i$@h1ITOFF|*C=N#vh25]bwVAc:S__Wo>k+Ua;&W5}S )6$6n9|Ez9+|RoiKG[dR' );
-define( 'SECURE_AUTH_KEY',  'cuA>3YYyY4UZx=p((2E:e>ueq&-f]h<Kd2dA8-|17L/eLGJ]?:`K3wd4#KFfZYtk' );
-define( 'LOGGED_IN_KEY',    '.M?~NZ-J0ODkfMrLdTnttGs#g2^4G)aNA5J@?qrJl;!Npn;:<EZ:s;ypway8M0}9' );
-define( 'NONCE_KEY',        'p>&BL+jH3H@<W<3JzwhM?mDUOb4^6p@Dd4{Uir?;TO?fkhP#mJ<ln<s@iBNB@d[2' );
-define( 'AUTH_SALT',        ')}B9C%W]Uc6MMq-IGQ[:-mRw^;kD09<`Z>|.Egf&?ON$&_$L|_qaV5N`!*/N?Q`=' );
-define( 'SECURE_AUTH_SALT', '/j/iK^I,@.L^pbCU&QdqT/zyrh%i>Y6XcX@]2=^}:W9aFp*erq0m,C0M0L>kiym2' );
-define( 'LOGGED_IN_SALT',   'QI!1$k83^NN0c5SAH8C.reWfFGTJ7@S~f[TEo|rWX(j?gJ2ph-zvOb.,5)JKdgf?' );
-define( 'NONCE_SALT',       '+M>S(q,Fmx!<v,-&z.1T4V`IG@(/bY+?fF+XR_UT-m~y?9d~d`l|)VKM2KM$JD-$' );
+define( 'AUTH_KEY',         '4415k1=8{FsUVv.r[4,gMsiW{<pvl)K0T{TjT:S;9M`&aP[II$f.GvV,ivZk:L,c' );
+define( 'SECURE_AUTH_KEY',  'g2|#x59+rx1QA]F9eQ/-GBKVoN.e/ijUUjXjzw]+`*A7Mk@r5=H.VWS`{WTf86f$' );
+define( 'LOGGED_IN_KEY',    'EKq*{Zr[eBWu*T>{^^-{&tI=cS<lh6N,Z?:0(+GQcv{f{==Nh(wnrhPFuy:- I&J' );
+define( 'NONCE_KEY',        '*mIX^y|Q9g78r 23QTA.0y+yo?@8Z~n.{9M,+887!~POJz;3>U:+O@AOqm;)cXeF' );
+define( 'AUTH_SALT',        '$p}s=LB/>ff8:Fy!|pbYTt*q c{YY7>sl2&JO`?)<%L~hj=.lyTRa%-AX3-Qq&;0' );
+define( 'SECURE_AUTH_SALT', 'rh-v=Sz*,Y9w/_4uyS{_:lkHeX-alv,UOjw! 5T(*S7[?1kq|8R~3$ca bR)00}2' );
+define( 'LOGGED_IN_SALT',   '[AiF5k6$&/S HR9J&Y;I3Oxb53NTDaf:?)&])vdR_L;l,czjJ5W(=Ke}!(rQ{5W_' );
+define( 'NONCE_SALT',       'RdZki!lWoTDwsg~,eN&8Z%BxRF][{I+rXi4qf$G(,8TS))pN5`V9YHGZW,d+2+C,' );
 
 /**#@-*/
 
@@ -90,4 +88,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once( ABSPATH . 'wp-settings.php' );
-

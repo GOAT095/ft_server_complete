@@ -21,10 +21,10 @@ RUN mv default /etc/nginx/sites-available/
 RUN unzip phpMyAdmin-4.9.2-all-languages.zip &&\
     mkdir var/www/html/phpmyadmin &&\
     mv phpMyAdmin-4.9.2-all-languages/* var/www/html/phpmyadmin && \
-    chown -R mysql:mysql /var/lib/mysql &&\
-    unzip latest.zip -d /var/www/html/ &&\
-    cp -r /var/www/html/wordpress/* /var/www/html/
-#copy comfig.inc.php for blowfish warning
+    unzip latest.zip -d /var/www/html/ && \
+    mv /var/www/html/wordpress/* /var/www/html/
+    # mv /var/www/html/wordpress/.* /var/www/html/
+#copy config.inc.php for blowfish warning
 COPY srcs/config.inc.php /var/www/html/phpmyadmin/
 #tmp warning
 RUN mkdir var/www/html/phpmyadmin/tmp &&\
@@ -34,8 +34,7 @@ COPY srcs/domain.crt /etc/ssl/certs/
 COPY srcs/domain.key /etc/ssl/private/
 #wordpress config and database
 COPY srcs/wordpress.sql /var/wordpress.sql
-COPY srcs/wp-config.php /var/www/html
-COPY srcs/wp-config.php /var/www/html/wordpress
+COPY srcs/wp-config.php /var/www/html/
 #start services and give privileges
 COPY srcs/services-user.sh /
 CMD [ "bash", "services-user.sh" ]
